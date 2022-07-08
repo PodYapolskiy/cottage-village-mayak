@@ -1,1 +1,8 @@
+# Environment
 /env
+
+# Cache
+__pycache__
+
+# Database
+*.sqlite3
