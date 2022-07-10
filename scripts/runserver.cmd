@@ -1,0 +1,2 @@
+cd cottagevillagemayak
+python manage.py runserver
