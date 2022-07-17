@@ -1,0 +1,98 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <title>КП Маяк</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'fonts.css' %}" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
+  </head>
+  <body>
+    <!--  -->
+    <nav class="navbar container navbar-expand-lg d-flex justify-content-between"> 
+      <!-- Logo -->
+      <a class="col-1 navbar-brand logo-top gotham-black" href="#">
+        <img
+          src="{% static 'img/logo.png' %}"
+          height="50vh"
+          class="d-inline-block"
+          alt=""
+          loading="lazy"
+        />
+        Маяк
+      </a>
+
+      <!-- Nav links -->
+      <div>
+        <div class="col-12 collapse navbar-collapse fs-18">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">О посёлке</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Новости</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Услуги</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Генплан</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Login -->
+      <div class="col-1">
+        <a class="logo-top" href="#">
+          <img
+            src="{% static 'img/account.png' %}"
+            height="50vh"
+            class="d-inline-block"
+            alt=""
+            loading="lazy"
+          />
+        </a>
+      </div>
+    </nav>
+
+    {% block index %} {% endblock %}
+    <!--
+      <footer>
+        <div class="container">
+          <nav class="navbar container">
+            <a class="navbar-brand logo-top" href="#">
+              <img
+                src="{% static 'img/Logo.png' %}"
+                width="40"
+                height="40"
+                class="d-inline-block align-top"
+                alt=""
+                loading="lazy"
+              />
+              Brand Name
+            </a>
+            <div class="contact-top">
+              <a class="whatsapp-number" href="https://web.whatsapp.com/"></a>
+              <a class="telegram-number" href="https://t.me/"></a>
+              <a class="phone-number text-dark" href="tel:+74957777777">
+                <h6>+7(495)-777-77-77</h6></a
+              >
+            </div>
+          </nav>
+        </div>
+      </footer>
+      -->
+  </body>
+</html>
