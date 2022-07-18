@@ -1,6 +1,9 @@
 # Environment
 /env
 
+# Configs
+config.*
+
 # Cache
 __pycache__
 
