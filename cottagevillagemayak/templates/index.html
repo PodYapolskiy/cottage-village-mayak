@@ -2,7 +2,16 @@
 {% load static %}
 
 {% block index %}
-  <div class="container">
-    Hello World!
+  <div class="container-fluid p-0">
+    <div class="darkened-image full-width">
+      <img src="{% static 'img/main.jpg' %}" alt="">
+    </div>
+
+    <!-- ! -->
+    <div class="">
+      <div class="bottom-left">
+        <span class="">КОТТЕДЖНЫЙ ПОСЁЛОК</span>
+      </div>
+    </div>
   </div>
-{% endblock  %}
+{% endblock %}

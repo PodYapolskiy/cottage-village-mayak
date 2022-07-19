@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>КП Маяк</title>
+
     <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
@@ -9,12 +10,20 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="{% static 'fonts.css' %}" />
-    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}"/>
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="{% static 'img/favicon.ico' %}"
+    />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
   </head>
   <body>
-    <!--  -->
-    <nav class="navbar container navbar-expand-lg d-flex justify-content-between"> 
+    <!-- Navbar -->
+    <nav class="navbar container navbar-expand-lg d-flex justify-content-between">
       <!-- Logo -->
       <a class="col-1 navbar-brand logo-top gotham-black" href="#">
         <img
@@ -32,13 +41,13 @@
         <div class="col-12 collapse navbar-collapse fs-18">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Главная</a>
+              <a class="nav-link" href="/">Главная</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">О посёлке</a>
+              <a class="nav-link" href="/about">О посёлке</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Новости</a>
+              <a class="nav-link" href="/news">Новости</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Услуги</a>
@@ -47,7 +56,7 @@
               <a class="nav-link" href="#">Генплан</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Контакты</a>
+              <a class="nav-link" href="/contacts">Контакты</a>
             </li>
           </ul>
         </div>
@@ -55,7 +64,7 @@
 
       <!-- Login -->
       <div class="col-1">
-        <a class="logo-top" href="#">
+        <a class="logo-top justify-content-end" href="#">
           <img
             src="{% static 'img/account.png' %}"
             height="50vh"
@@ -68,6 +77,9 @@
     </nav>
 
     {% block index %} {% endblock %}
+
+    {% block about %} {% endblock %}
+
     <!--
       <footer>
         <div class="container">
