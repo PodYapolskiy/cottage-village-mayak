@@ -8,9 +8,17 @@
     src: url("fonts/GothamPro-Light.ttf");
 }
 
+.gotham-light {
+    font-family: "Gotham Pro Light";
+}
+
 @font-face {
     font-family: "Gotham Pro Medium";
     src: url("fonts/GothamPro-Medium.ttf");
+}
+
+.gotham-medium {
+    font-family: "Gotham Pro Medium";
 }
 
 @font-face {
@@ -18,30 +26,22 @@
     src: url("fonts/GothamPro-Bold.ttf");
 }
 
+.gotham-bold {
+    font-family: "Gotham Pro Bold";
+}
+
 @font-face {
     font-family: "Gotham Pro Black";
     src: url("fonts/GothamPro-Black.ttf");
 }
 
+.gotham-black {
+    font-family: "Gotham Pro Black";
+}
+
 /* Accept fonts */
 * {
     font-family: "Gotham Pro";
-}
-
-.gotham-light {
-    font-family: "Gotham Pro Light";
-}
-
-.gotham-medium {
-    font-family: "Gotham Pro Medium";
-}
-
-.gotham-bold {
-    font-family: "Gotham Pro Bold";
-}
-
-.gotham-black {
-    font-family: "Gotham Pro Black";
 }
 
 .fs-18 {
