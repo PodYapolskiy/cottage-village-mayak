@@ -1,0 +1,31 @@
+@use "sass:string";
+
+$font-families: (
+    "Gotham Pro": "fonts/GothamPro.ttf",
+    "Gotham Pro Light": "fonts/GothamPro-Light.ttf",
+    "Gotham Pro Medium": "fonts/GothamPro-Medium.ttf",
+    "Gotham Pro Bold": "fonts/GothamPro-Bold.ttf",
+    "Gotham Pro Black": "fonts/GothamPro-Black.ttf",
+);
+
+@each $font-family, $url in $font-families {
+    @font-face {
+        font-family: $font-family;
+        src: url($url);
+    }
+    @if ($font-family != "Gotham Pro") {
+        .gotham-#{string.to-lower-case(string.slice($font-family, 12))} {
+            font-family: $font-family;
+        }
+    }
+}
+
+/* Accept fonts */
+* {
+    // padding: 0;
+    font-family: "Gotham Pro";
+}
+
+.fs-18 {
+    font-size: 18 !important;
+}

@@ -1,0 +1,19 @@
+img {
+    div .darkened-image > & {
+        filter: brightness(35%);
+    }
+
+    div .full-width > & {
+        width: 100vw;
+    }
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 15vh;
+    left: 10vw;
+}
+
+.p-0 {
+    padding: 0;
+}
