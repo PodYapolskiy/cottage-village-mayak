@@ -1,3 +1,74 @@
+/* Reset module
+==================
+
+Clear some default styles
+*/
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+img,
+picture {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        -webkit-animation-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        -webkit-animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Fonts module
+==================
+
+All font styles.
+
+Loaded fonts:
+- Gotham Pro
+- Gotham Pro Light
+- Gotham Pro Medium
+- Gotham Pro Bold
+- Gotham Pro Black
+*/
 @font-face {
     font-family: "Gotham Pro";
     src: url("fonts/GothamPro.ttf");
@@ -48,6 +119,11 @@
     font-size: 18 !important;
 }
 
+/* Img module
+================
+
+All image styles.
+*/
 div .darkened-image>img {
     filter: brightness(35%);
 }
@@ -57,6 +133,8 @@ div .full-width>img {
 }
 
 .bottom-left {
+    display: inline-block;
+    color: #fff;
     position: absolute;
     bottom: 15vh;
     left: 10vw;
