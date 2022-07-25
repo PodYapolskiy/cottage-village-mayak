@@ -3,28 +3,25 @@
 
 All image styles.
 */
-img {
-    div .darkened-image > & {
-        filter: brightness(35%);
-    }
+div #start {
+    position: relative;
 
-    div .full-width > & {
+    img {
+        filter: brightness(35%);
         width: 100vw;
     }
-}
 
-// .main-content {
-
-// }
-
-.bottom-left {
-    display: inline-block;
-    color: #fff;
-    position: absolute;
-    bottom: 15vh;
-    left: 10vw;
-}
-
-.p-0 {
-    padding: 0;
+    .start-text {
+        position: absolute;
+        left: 15%;
+        top: 13%;
+        height: 24%;
+        // width: 350px;
+        text-transform: uppercase;
+        color: white;
+        // background: #00000094;
+        // padding: 10px;
+        text-align: left;
+        font: "Gotham Pro Bold";
+    }
 }

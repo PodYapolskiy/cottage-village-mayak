@@ -1,0 +1,9 @@
+@mixin from-i-to-j-with-step-and-style($i, $j, $step, $style_name, $style_short_name) {
+    @for $k from $i through $j {
+        @if ($k % $step == 0) {
+            .#{$style_short_name}-#{$k} {
+                #{$style_name}: #{$k};
+            }
+        }
+    }
+}
