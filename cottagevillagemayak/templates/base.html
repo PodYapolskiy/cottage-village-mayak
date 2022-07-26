@@ -25,7 +25,7 @@
     <!-- Navbar -->
     <nav class="navbar container navbar-expand-lg d-flex justify-content-between">
       <!-- Logo -->
-      <a class="col-1 navbar-brand logo-top gotham-black" href="#">
+      <a class="col-1 navbar-brand logo-top gotham-black" href="/">
         <img
           src="{% static 'img/logo.png' %}"
           height="50vh"
@@ -50,10 +50,10 @@
               <a class="nav-link" href="/news">Новости</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Услуги</a>
+              <a class="nav-link" href="/services">Услуги</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Генплан</a>
+              <a class="nav-link" href="/genplan">Генплан</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/contacts">Контакты</a>
@@ -63,16 +63,16 @@
       </div>
 
       <!-- Login -->
-      <div class="col-1">
-        <a class="logo-top justify-content-end" href="#">
-          <img
-            src="{% static 'img/account.png' %}"
-            height="50vh"
-            class="d-inline-block"
-            alt=""
-            loading="lazy"
-          />
-        </a>
+      <div class="col-1 d-flex justify-content-end d-inline">
+          <a class="logo-top" href="#">
+            <img
+              src="{% static 'img/account.png' %}"
+              height="50vh"
+              class=""
+              alt=""
+              loading="lazy"
+            />
+          </a>
       </div>
     </nav>
 

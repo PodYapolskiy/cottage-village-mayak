@@ -1,0 +1,7 @@
+/* Spacing module
+====================
+
+Margins and paddings.
+*/
+@include from-i-to-j-with-step-and-style(0, 50, 2, "padding", "p");
+@include from-i-to-j-with-step-and-style(0, 50, 2, "margin", "m");

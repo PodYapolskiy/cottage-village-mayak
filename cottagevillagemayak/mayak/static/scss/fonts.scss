@@ -1,3 +1,15 @@
+/* Fonts module
+==================
+
+All font styles.
+
+Loaded fonts:
+- Gotham Pro
+- Gotham Pro Light
+- Gotham Pro Medium
+- Gotham Pro Bold
+- Gotham Pro Black
+*/
 @use "sass:string";
 
 $font-families: (
@@ -13,19 +25,20 @@ $font-families: (
         font-family: $font-family;
         src: url($url);
     }
+
     @if ($font-family != "Gotham Pro") {
         .gotham-#{string.to-lower-case(string.slice($font-family, 12))} {
-            font-family: $font-family;
+            font-family: $font-family !important;
+
+            p {
+                font-family: inherit;
+            }
         }
     }
 }
 
-/* Accept fonts */
 * {
-    // padding: 0;
     font-family: "Gotham Pro";
 }
 
-.fs-18 {
-    font-size: 18 !important;
-}
+@include from-i-to-j-with-step-and-style(2, 48, 2, "font-size", "fs");

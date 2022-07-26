@@ -2,16 +2,20 @@
 {% load static %}
 
 {% block index %}
-  <div class="container-fluid p-0">
-    <div class="darkened-image full-width">
+  <div>
+    <div id="start" class="container-fluid p-0">
       <img src="{% static 'img/main.jpg' %}" alt="">
-    </div>
-
-    <!-- ! -->
-    <div class="">
-      <div class="bottom-left">
-        <span class="">КОТТЕДЖНЫЙ ПОСЁЛОК</span>
+      <div class="container start-text gotham-bold p-0">
+        <p class="fs-36">КОТТЕДЖНЫЙ ПОСЁЛОК</p>
+        <p class="fs-28">в можайской области</p>
       </div>
     </div>
+    
+    {% for i in 9|get_range %}
+      {{ i }}
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde amet, omnis dignissimos nostrum suscipit, ea quaerat nobis dolores ratione id voluptatem minus magnam debitis fugit cupiditate totam facilis officiis. Earum!
+      </p>
+    {% endfor %}
   </div>
 {% endblock %}
