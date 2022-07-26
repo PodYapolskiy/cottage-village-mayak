@@ -19,11 +19,16 @@ from django.urls import path
 # from django.conf import settings
 # from django.conf.urls.static import static
 
-from crm.views import index_page
+from crm.views import index_page, about_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index_page)
+    path('', index_page),
+    path('about/', about_page),
+    # path('news/', news_page),
+    # path('services/', services_page),
+    # path('genplan/', genplan_page),
+    # path('contacts/', contacts_page)
 ]
 # + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  # + \
 # static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
