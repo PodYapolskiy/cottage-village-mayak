@@ -3,6 +3,7 @@
 
 {% block index %}
   <div>
+    <!-- Start info block -->
     <div id="start" class="container-fluid p-0">
       <img src="{% static 'img/main.jpg' %}" alt="">
       <div class="container start-text gotham-bold p-0">
@@ -10,12 +11,59 @@
         <p class="fs-28">в можайской области</p>
       </div>
     </div>
+
+    <!-- News block -->
+    <div class="news mt-5">
+      <div class="container news-header gotham-bold fs-36 p-0">
+        Актуальные новости
+      </div>
+      <div id="news-carousel" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#news-carousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
+          <button type="button" data-bs-target="#news-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#news-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div> 
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{ news.1.url }}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>{{ news.1.title }}</h5>
+              <p>{{ news.1.date }}</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{ news.2.url }}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>{{ news.2.title }}</h5>
+              <p>{{ news.2.date }}</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{ news.3.url }}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>{{ news.3.title }}</h5>
+              <p>{{ news.3.date }}</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#news-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#news-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
     
-    {% for i in 9|get_range %}
-      {{ i }}
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde amet, omnis dignissimos nostrum suscipit, ea quaerat nobis dolores ratione id voluptatem minus magnam debitis fugit cupiditate totam facilis officiis. Earum!
-      </p>
-    {% endfor %}
+    <div class="container">
+      {% for i in 9|get_range %}
+        {{ i }}
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde amet, omnis dignissimos nostrum suscipit, ea quaerat nobis dolores ratione id voluptatem minus magnam debitis fugit cupiditate totam facilis officiis. Earum!
+        </p>
+      {% endfor %}
+    </div>
   </div>
 {% endblock %}
